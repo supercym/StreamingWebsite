@@ -17,7 +17,7 @@ func reLaunch()  {
 }
 
 func firstPage(w http.ResponseWriter, r *http.Request)  {
-	io.WriteString(w, "<h1>Hello, this is my deploy page</h1>")
+	io.WriteString(w, "<h1>Hello, this is supercym deploy page</h1>")
 	reLaunch()
 }
 

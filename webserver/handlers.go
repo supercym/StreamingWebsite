@@ -13,7 +13,7 @@ func CreateUser(w http.ResponseWriter, r *http.Request, p httprouter.Params)  {
 func Login(w http.ResponseWriter, r *http.Request, p httprouter.Params)  {
 	// router在parse url的时候会把：后面的东西解析为ByName
 	uname := p.ByName("user_name")
-	io.WriteString(w, "this is the page of login.")
+	io.WriteString(w, "hello, this is the page of login.")
 	io.WriteString(w, uname)
 }
 
