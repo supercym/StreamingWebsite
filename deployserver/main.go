@@ -8,12 +8,15 @@ import (
 )
 
 func reLaunch()  {
-	cmd := exec.Command("sh", "./deploy.sh")
-	err := cmd.Start()
-	if err != nil {
-		log.Fatal(err)
+	cmd1 := exec.Command("chmod", "a+x ../deploy.sh")
+	cmd2 := exec.Command("sh", "../deploy.sh")
+	err1 := cmd1.Start()
+	err2 := cmd2.Start()
+	if err1 != nil || err2 != nil{
+		log.Fatal(err1)
 	}
-	err = cmd.Wait()
+	err1 = cmd1.Wait()
+	err2 = cmd2.Wait()
 }
 
 func firstPage(w http.ResponseWriter, r *http.Request)  {
