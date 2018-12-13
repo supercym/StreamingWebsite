@@ -1,2 +1,2 @@
 # StreamingWebsite
-Golang implements streaming website
+A streaming website implemented by golang 
