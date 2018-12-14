@@ -7,6 +7,7 @@ import (
 )
 
 func CreateUser(w http.ResponseWriter, r *http.Request, p httprouter.Params)  {
+	io.WriteString(w, "hello ztxpp!\n")
 	io.WriteString(w, "Create User Handler")
 }
 
