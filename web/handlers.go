@@ -42,6 +42,7 @@ func userHomeHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 	_, err2 := r.Cookie("session")
 	if err1 != nil || err2 != nil {
 		http.Redirect(w, r, "/", http.StatusFound)
+		return
 	}
 
 	fname := r.FormValue("username")
